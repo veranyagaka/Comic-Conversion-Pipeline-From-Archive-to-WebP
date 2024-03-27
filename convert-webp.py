@@ -18,11 +18,9 @@ def getFileMimeType(comic_file):
         if output in rar_mime:
             rar_mime = 'rar'
             return rar_mime
-        elif output in zip_mime:
+        else output in zip_mime:
             zip_mime = 'zip'
             return zip_mime
-        else:
-            return output
     except subprocess.CalledProcessError as e:
         logger.error(f"Error in Compression subprocess: {e.stderr}")
 
