@@ -18,7 +18,7 @@ def getFileMimeType(comic_file):
         if output in rar_mime:
             rar_mime = 'rar'
             return rar_mime
-        else output in zip_mime:
+        else:
             zip_mime = 'zip'
             return zip_mime
     except subprocess.CalledProcessError as e:
